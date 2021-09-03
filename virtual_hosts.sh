@@ -4,7 +4,7 @@
 # @TODO enable https (cerbot)
 
 SCRIPT=$( basename "$0" )
-version='1.0.0'
+version='1.1.0'
 delete=false
 
 while getopts "d" opt; do
@@ -41,6 +41,7 @@ if [ "$delete" = true ]; then
   cd /etc/apache2/sites-available/
   a2dissite $vhFile
   rm $vhFile
+  sed -i "/$DNS/d" /etc/hosts
   service apache2 restart
   exit 0
 fi

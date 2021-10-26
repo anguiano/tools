@@ -1,0 +1,13 @@
+[General]
+debug = false
+user = "pako"
+pass = "Al3mania*"
+
+[MySQL]
+user = "fespinosa"
+pass = "Al3mania*"
+database = "test"
+port = 3306
+
+[SASS]
+host = "127.0.0.1"
